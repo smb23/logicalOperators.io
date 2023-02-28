@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Review of Logical Operators Expressions</title>
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      
+      <body>
+        <div class="container mt-3">
+        <h1>Review of Logical Operators Expressions</h1>
+       <p><small>by: </small><b> Sam  Borja WD42P</b></p>  
+        <p>Evaluate whether each expression below will return TRUE or FALSE.</p>
+        <p>Assume that the value of x is 5.</p>
+        Enter a value for x: <input type="number" id="xInput">
+        <button onclick="checkX1();checkX2();checkX3();checkX4();checkX5();checkX6();checkX7();checkX8();checkX9();checkX10();">Check</button>
+       
+       </div>
+    
+       <div class="container mt-3">
+        <table class="table table-bordered table-dark table-striped">
+            <tbody><tr>
+              <th>Expression</th>
+              <th>Result</th>
+              <th>Explanation</th>
+            </tr>
+            <tr>
+              <td>x == 6</td>
+              <td><b id="result1"></b></td>
+              <td>Equality operator ( == ) checks if x is equal to 6.</td>
+            </tr>
+            <tr>
+              <td>x === "5"</td>
+              <td><b id="result2"></b></td>
+              <td>Strict equality operator ( === ) checks if x is equal to the string "5", which is not the same as the number 5.</td>
+            </tr>
+            <tr>
+              <td>x === 5</td>
+              <td><b id="result3"></b></td>
+              <td>Strict equality operator ( === ) checks if x is equal to the number 5.</td>
+            </tr>
+            <tr>
+              <td>x != 5</td>
+              <td><b id="result4"></b></td>
+              <td>Inequality operator ( != ) checks if x is not equal to 5.</td>
+            </tr>
+            <tr>
+              <td>x &lt; 10</td>
+              <td><b id="result5"></b></td>
+              <td>Less than operator ( &lt; ) checks if x is less than 10.</td>
+            </tr>
+            <tr>
+              <td>x &gt; 5</td>
+              <td><b id="result6"></b></td>
+              <td>Greater than operator ( &gt; ) checks if x is greater than 5.</td>
+            </tr>
+            <tr>
+              <td>x ≤ 5</td>
+              <td><b id="result7"></b></td>
+              <td>Less than or equal to operator ( ≤ ) checks if x is less than or equal to 5.</td>
+            </tr>
+            <tr>
+              <td>x ≥ 5 &amp;&amp; x != 10</td>
+              <td><b id="result8"></b></td>
+              <td>Logical AND operator ( &amp;&amp; ) checks if both expressions are true: x is greater than or equal to 5 AND x is not equal to 10.</td>
+            </tr>
+            <tr>
+              <td>x != 5 || x &lt; 10</td>
+              <td><b id="result9"></b></td>
+              <td>Logical OR operator ( || ) checks if at least one expression is true: x is not equal to 5 OR x is less than 10.</td>
+            </tr>
+            <tr>
+              <td>!(x &gt; (5 + x))</td>
+              <td><b id="result10"></b></td>
+              <td>Logical NOT operator ( ! ) negates the expression inside the parentheses:
+            
+        <script>
+          function checkX1() {
+            var x = document.getElementById("xInput").value;
+            var result1 = document.getElementById("result1");
+            if (x == 6) {
+              result1.innerHTML = "TRUE";
+              console.log(TRUE)
+            } else {
+              result1.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX2() {
+            var x = document.getElementById("xInput").value;
+            var result2 = document.getElementById("result2");
+            if (x === "5") {
+              result2.innerHTML = "TRUE";
+            } else {
+              result2.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX3() {
+            var x = document.getElementById("xInput").value;
+            var result3 = document.getElementById("result3");
+            if (x === 5) {
+              result3.innerHTML = "TRUE";
+            } else {
+              result3.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX4() {
+            var x = document.getElementById("xInput").value;
+            var result4 = document.getElementById("result4");
+            if (x != 5) {
+                result4.innerHTML = "TRUE";
+            } else {
+                result4.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX5() {
+            var x = document.getElementById("xInput").value;
+            var result5 = document.getElementById("result5");
+            if (x < 10) {
+                result5.innerHTML = "TRUE";
+            } else {
+                result5.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX6() {
+            var x = document.getElementById("xInput").value;
+            var result6 = document.getElementById("result6");
+            if (x > 5) {
+                result6.innerHTML = "TRUE";
+            } else {
+                result6.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX7() {
+            var x = document.getElementById("xInput").value;
+            var result7 = document.getElementById("result7");
+            if (x <= 5) {
+                result7.innerHTML = "TRUE";
+            } else {
+                result7.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX8() {
+            var x = document.getElementById("xInput").value;
+            var result8 = document.getElementById("result8");
+            if (x >= 5 && x != 10) {
+                result8.innerHTML = "TRUE";
+            } else {
+                result8.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX9() {
+            var x = document.getElementById("xInput").value;
+            var result9 = document.getElementById("result9");
+            if (x != 5 || x <10) {
+                result9.innerHTML = "TRUE";
+            } else {
+                result9.innerHTML = "FALSE";
+            }
+          }
+    
+          function checkX10() {
+            var x = document.getElementById("xInput").value;
+            var result10 = document.getElementById("result10");
+            if (!(x > (5 + x) )) {
+                result10.innerHTML = "TRUE";
+            } else {
+                result10.innerHTML = "FALSE";
+            }
+          }
+        </script>
+        
+      
+    
+    </td></tr></tbody></table></div></body>
+</html>
